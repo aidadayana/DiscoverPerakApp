@@ -1,0 +1,281 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <!-- MAIN CONTAINER -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TOP BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="43dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp"
+                android:src="@drawable/backicon"
+                android:tint="@color/topbar_icon" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/foodTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Attraction"
+                android:textColor="@color/topbar_text"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <!-- Home Button -->
+            <ImageView
+                android:id="@+id/btnHome"
+                android:layout_width="45dp"
+                android:layout_height="43dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp"
+                android:src="@drawable/homebtn"
+                android:tint="@color/topbar_icon" />
+        </LinearLayout>
+
+        <!-- CARD BUTTON -->
+        <LinearLayout
+            android:id="@+id/cardmarina"
+            android:layout_width="350dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/smallbg"
+            android:clickable="true"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marina Island"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- MAIN CONTENT CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/longsquarebox"
+            android:elevation="10dp"
+            android:minHeight="50dp"
+            android:orientation="vertical"
+            android:paddingStart="32dp"
+            android:paddingTop="60dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="60dp">
+
+
+            <!-- IMAGE SCROLL -->
+
+            <!-- TITLE -->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imageRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="12dp"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Marina Island"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- LOCATION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="📍 Lumut, Manjung"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- OPERATION HOURS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="🕒 Operation Hours"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- DESCRIPTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="• Monday – Sunday: 8:00 AM – 10:00 PM"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="ℹ️ About Marina Island"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Marina Island is a man-made island located near Lumut, Perak, overlooking the Straits of Malacca. Known for its peaceful seaside atmosphere, the island is a popular destination for leisure, relaxation, and photography. With beautiful sunsets, open sea views, and modern marina facilities, Marina Island is suitable for families, couples, and tourists looking for a calm coastal getaway."
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- MAIN ATTRACTIONS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="⭐ Main Attractions"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="• Scenic seaside views and sunset spots"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="• Marina Island Pangkor Resort and Hotel"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="• Yacht marina and coastal walkways"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- ACTIVITIES -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="🚴 Activities"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="• Cycling and jogging along the coast"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="• Photography and sightseeing"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="• Leisure walks and family outings"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- 360 VIEW TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="🌐 360° View"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- 360 VIEW DESCRIPTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Click to see the 360° view of Marina Island"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- 360 IMAGE -->
+            <ImageView
+                android:id="@+id/image360View"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/marinaisland"
+                android:contentDescription="Open 360 view of Marina Island"
+                android:textColor="#000000"/>
+
+
+            <!-- MAP IMAGE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="📍 Location"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/mapImageView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:clickable="true"
+                android:contentDescription="Map to Marina Island"
+                android:textColor="#000000"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/marina_map" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

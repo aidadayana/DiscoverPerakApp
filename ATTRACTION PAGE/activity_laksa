@@ -1,0 +1,415 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TOP BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="43dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp"
+                android:src="@drawable/backicon"
+                android:tint="@color/topbar_icon" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/foodTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Food Place"
+                android:textColor="@color/topbar_text"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <!-- Home Button -->
+            <ImageView
+                android:id="@+id/btnHome"
+                android:layout_width="45dp"
+                android:layout_height="43dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp"
+                android:src="@drawable/homebtn"
+                android:tint="@color/topbar_icon" />
+        </LinearLayout>
+
+        <!-- CARD BUTTON -->
+        <LinearLayout
+            android:id="@+id/cardlaksa"
+            android:layout_width="350dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/smallbg"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="6dp"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laksa Saranghae"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- MAIN CONTENT CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/longsquarebox"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:paddingStart="32dp"
+            android:paddingTop="60dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="60dp">
+
+            <!-- IMAGE SLIDER -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imageRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="12dp"
+                android:overScrollMode="never" />
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laksa Saranghae"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <!-- LOCATION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 Silibin, Ipoh"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- OPERATION HOURS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🕒 Operation Hours"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:shrinkColumns="0"
+                android:layout_marginBottom="12dp"
+                android:padding="4dp">
+
+                <!-- Header -->
+                <TableRow
+                    android:background="@android:color/darker_gray">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Day"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:padding="8dp"
+                        android:text="Hours"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                </TableRow>
+
+                <!-- Monday -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Monday"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:padding="8dp"
+                        android:text="Closed"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="center" />
+                </TableRow>
+
+                <!-- Tuesday to Sunday -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Tuesday"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:padding="8dp"
+                        android:text="12:30 PM – 10:00 PM"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Wednesday"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:padding="8dp"
+                        android:text="12:30 PM – 10:00 PM"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Thursday"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:padding="8dp"
+                        android:text="12:30 PM – 10:00 PM"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Friday"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:padding="8dp"
+                        android:text="12:30 PM – 10:00 PM"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Saturday"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:padding="8dp"
+                        android:text="12:30 PM – 10:00 PM"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Sunday"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:padding="8dp"
+                        android:text="12:30 PM – 10:00 PM"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                </TableRow>
+
+            </TableLayout>
+
+            <!-- ABOUT -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ℹ️ About Laksa Saranghae"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laksa Saranghae is a well-known local eatery in Teluk Intan, famous for its rich and flavourful laksa broth. Loved by locals and visitors, this place offers an authentic taste of traditional Malaysian laksa in a simple and welcoming setting."
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- POPULAR MENU -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍜 Popular Menu"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Laksa Saranghae special"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Laksa Telur"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Laksa udang"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Teh ais and sirap bandung"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- CONTACT INFO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📞 Contact Number"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+60 13-232 5800"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="openInstagramProfile">
+
+                <ImageView
+                    android:id="@+id/btnInstagram"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/insta_icon"
+                    android:contentDescription="Instagram Profile"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/instagramText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="laksa_saranghaeipoh"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- MAP -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 Location"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <ImageView
+                android:id="@+id/mapImageView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/laksa_map"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Map to Laksa Sarangahe"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

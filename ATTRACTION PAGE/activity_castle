@@ -1,0 +1,297 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <!-- MAIN CONTAINER -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TOP BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="43dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp"
+                android:src="@drawable/backicon"
+                android:tint="@color/topbar_icon" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/foodTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Attraction"
+                android:textColor="@color/topbar_text"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <!-- Home Button -->
+            <ImageView
+                android:id="@+id/btnHome"
+                android:layout_width="45dp"
+                android:layout_height="43dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp"
+                android:src="@drawable/homebtn"
+                android:tint="@color/topbar_icon" />
+        </LinearLayout>
+
+
+        <!-- CARD BUTTON -->
+        <LinearLayout
+            android:id="@+id/cardkelliescastle"
+            android:layout_width="350dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/smallbg"
+            android:clickable="true"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kellie's Castle"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- MAIN CONTENT CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/longsquarebox"
+            android:elevation="10dp"
+            android:minHeight="50dp"
+            android:orientation="vertical"
+            android:paddingStart="32dp"
+            android:paddingTop="60dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="60dp">
+
+
+            <!-- IMAGE SCROLL -->
+
+            <!-- TITLE -->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imageRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="12dp"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Kellie's Castle"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- LOCATION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="📍 Batu Gajah, Ipoh"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- OPERATION HOURS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="🕒 Operation Hours"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="• Monday – Sunday: 9:00 AM – 6:00 PM"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- DESCRIPTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="ℹ️ About Kellie's Castle"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Kellie's Castle is a historical mansion built by William Kellie Smith. In the early 20th century this building is a gift for his wife, but construction stopped after his sudden death in 1926, leaving it a unique architectural ruin blending Moorish, Indo-Saracenic, and Roman styles. Today, it's a popular, slightly eerie tourist spot famous for its colonial history, unique design, and ghost stories, with entry fees for tourists and locals. This is known for its unique architecture and mysterious history, this landmark offers stunning photo spots and scenic views around Batu Gajah."
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- TICKET PRICE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="🎟️ Ticket Price"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="• Malaysian Adult: RM 5.00"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="• Malaysian Child: RM 3.00"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="• Non-Malaysian Adult: RM 10.00"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="• Non-Malaysian Child: RM 5.00"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- 360 VIEW TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="🌐 360° View"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- 360 VIEW DESCRIPTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Click to see the 360° view of Kellie's Castle"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- 360 IMAGE -->
+            <ImageView
+                android:id="@+id/image360castle"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/castle360"
+                android:textColor="#000000"
+                android:contentDescription="Open 360 view of Marina Island" />
+
+
+            <!-- VIDEO VIEW -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="🎬 Video"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- VIDEO DESCRIPTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Click to watch a short video of Kellie's Castle"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="0dp">
+
+                <VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/btnPlayPause"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/playicon" />
+            </FrameLayout>
+
+            <!-- MAP IMAGE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:text="📍 Location"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/mapImageView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="0dp"
+                android:clickable="true"
+                android:contentDescription="Map to Kellie's Castle"
+                android:textColor="#000000"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kellcastle_map" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
